@@ -51,13 +51,12 @@ public class CountingSort {
 
         // ordena
         long t1 = System.currentTimeMillis();
-        //int B[] = countingSort(A, n, max(A));
-        Arrays.sort(A);
+        int B[] = countingSort(A, n, max(A));
         long t2 = System.currentTimeMillis();
 
         // saída
-        //System.out.println("Tempo: " + (t2 - t1) + " ms");
-        System.out.println(Arrays.toString(A));
+        System.out.println("Tempo: " + (t2 - t1) + " ms");
+        //System.out.println(Arrays.toString(A));
 
         reader.close();
     }
