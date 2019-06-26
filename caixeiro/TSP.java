@@ -27,7 +27,7 @@ public class TSP {
         int menorDistanciaSalva = INFINITO;
 
         for (int cidade = 0; cidade < numeroCidades; cidade++) {
-            // Verificamos SE essa cidade pertence a solução atual (ao bitmask)
+            // Verificamos SE essa cidade NÃO pertence a solução atual (ao bitmask)
             if (solucaoNaoContem(cidade, bitmask)) {
                 // Obtêm a distância da cidade atual até essa cidade (u até v)
                 int distanciaUV = distancias[cidadeAtual][cidade];
