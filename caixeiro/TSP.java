@@ -28,7 +28,7 @@ public class TSP {
 
         for (int cidade = 0; cidade < numeroCidades; cidade++) {
             // Verificamos SE essa cidade pertence a solução atual (ao bitmask)
-            if (solucaoContem(cidade, bitmask)) {
+            if (solucaoNaoContem(cidade, bitmask)) {
                 // Obtêm a distância da cidade atual até essa cidade (u até v)
                 int distanciaUV = distancias[cidadeAtual][cidade];
 
@@ -55,7 +55,7 @@ public class TSP {
         return (bitMask | (1 << cidade));
     }
 
-    public static boolean solucaoContem(int cidade, int bitMask) {
+    public static boolean solucaoNaoContem(int cidade, int bitMask) {
         return (bitMask & (1 << cidade)) == 0;
     }
 
